@@ -6,6 +6,9 @@ public class WizardTest {
 
   Wizard wizard;
   Broomstick broomstick;
+  MagicCarpet magicCarpet;
+  Dragon dragon;
+  Ogre ogre;
 
   @Before
   public void before(){
@@ -47,4 +50,11 @@ public class WizardTest {
     assertEquals("Standing up tall, beating wings, lift off!",wizard.fly());
 
   }
-}
+
+  @Test
+  public void canUseBeastToDefend(){
+    magicCarpet = new MagicCarpet("Red");
+    dragon = new Dragon("Red, the defender");
+    wizard = new Wizard("Colin", magicCarpet, dragon);
+    assertEquals("Red, the defender swooops in and breaths fire on all hostile targets", wizard.protect());
+  }
