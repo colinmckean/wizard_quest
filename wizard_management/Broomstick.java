@@ -1,5 +1,5 @@
 package wizard_management;
- 
+
 import behaviours.Flyable;
 
 public class Broomstick extends CleaningImplement implements Flyable{

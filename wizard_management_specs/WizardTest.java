@@ -56,23 +56,23 @@ public class WizardTest {
     magicCarpet = new MagicCarpet("Red");
     dragon = new Dragon("Red, the defender");
     wizard = new Wizard("Colin", magicCarpet, dragon);
-    assertEquals("Red, the defender swooops in and breaths fire on all hostile targets", wizard.protect());
+    assertEquals("Red, the defender swooops in and breathes fire on all hostile targets", wizard.protect());
   }
 
-    @Test
-    public void canChangeProtector(){
-      magicCarpet = new MagicCarpet("Blue");
-      dragon = new Dragon("Cringer");
-      ogre = new Ogre("Mr. Smelly ogre");
-      wizard = new Wizard("Colin", magicCarpet, dragon);
-      wizard.setProtector(ogre);
-      assertEquals("Mr. Smelly ogre does what an ogre does to its enemies.", wizard.protect());
+  @Test
+  public void canChangeProtector(){
+    magicCarpet = new MagicCarpet("Blue");
+    dragon = new Dragon("Cringer");
+    ogre = new Ogre("Mr. Smelly ogre");
+    wizard = new Wizard("Colin", magicCarpet, dragon);
+    wizard.setProtector(ogre);
+    assertEquals("Mr. Smelly ogre does what an ogre does to its enemies.", wizard.protect());
 
-    }
-    
-    @Test
-    public void testThePowerOfThePaperBag(){
-      assertEquals("Brown paper bag offers little protection.",wizard.protect());
-      wizard.setProtector(ogre);
-    }
   }
+  
+  @Test
+  public void testThePowerOfThePaperBag(){
+    assertEquals("Brown paper bag offers little protection.",wizard.protect());
+    wizard.setProtector(ogre);
+  }
+}

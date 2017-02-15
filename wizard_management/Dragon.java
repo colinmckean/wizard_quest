@@ -1,8 +1,9 @@
 package wizard_management;
 
 import behaviours.Flyable;
+import behaviours.Protector;
 
-public class Dragon extends MythicalBeast implements Flyable{
+public class Dragon extends MythicalBeast implements Flyable, Protector{
 
   public Dragon(String name){
     super(name);
@@ -11,5 +12,8 @@ public class Dragon extends MythicalBeast implements Flyable{
   public String fly(){
     return "Standing up tall, beating wings, lift off!";
   }
-
+  
+  public String protect(){
+    return getName() + " swooops in and breathes fire on all hostile targets";
+  }
 }

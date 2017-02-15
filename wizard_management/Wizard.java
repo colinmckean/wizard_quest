@@ -1,10 +1,13 @@
 package wizard_management;
 import behaviours.Flyable;
 import behaviours.Protector;
+
 public class Wizard {
+
   String name;
   Flyable ride;
   Protector protector;
+
   private static Protector defaultProtector = new PaperBag("Brown");
 
   public Wizard(String name, Flyable ride, Protector protector){
@@ -12,6 +15,7 @@ public class Wizard {
     this.ride = ride;
     this.protector = protector;
   }
+
   public Wizard(String name, Flyable ride){
     this(name,ride,defaultProtector);
   }
@@ -31,9 +35,11 @@ public class Wizard {
   public void setRide(Flyable ride){
     this.ride = ride;
   }
+
   public String protect(){
     return this.protector.protect();
   }
+
   public void setProtector(Protector protector){
     this.protector = protector;
   }

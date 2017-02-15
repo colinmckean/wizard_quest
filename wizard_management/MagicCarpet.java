@@ -1,5 +1,6 @@
 package wizard_management;
 import behaviours.Flyable;
+import behaviours.Protector;
 
 public class MagicCarpet extends Carpet implements Flyable{
 
