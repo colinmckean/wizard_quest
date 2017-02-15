@@ -58,3 +58,15 @@ public class WizardTest {
     wizard = new Wizard("Colin", magicCarpet, dragon);
     assertEquals("Red, the defender swooops in and breaths fire on all hostile targets", wizard.protect());
   }
+
+    @Test
+    public void canChangeProtector(){
+      magicCarpet = new MagicCarpet("Blue");
+      dragon = new Dragon("Cringer");
+      ogre = new Ogre("Mr. Smelly ogre");
+      wizard = new Wizard("Colin", magicCarpet, dragon);
+      wizard.setProtector(ogre);
+      assertEquals("Mr. Smelly ogre does what an ogre does to its enemies.", wizard.protect());
+
+    }
+  }
