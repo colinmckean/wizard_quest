@@ -69,4 +69,10 @@ public class WizardTest {
       assertEquals("Mr. Smelly ogre does what an ogre does to its enemies.", wizard.protect());
 
     }
+    
+    @Test
+    public void testThePowerOfThePaperBag(){
+      assertEquals("Brown paper bag offers little protection.",wizard.protect());
+      wizard.setProtector(ogre);
+    }
   }
