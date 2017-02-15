@@ -4,10 +4,9 @@ import behaviours.Protector;
 
 public class Wizard {
 
-  String name;
-  Flyable ride;
-  Protector protector;
-
+  private String name;
+  private Flyable ride;
+  private Protector protector;
   private static Protector defaultProtector = new PaperBag("Brown");
 
   public Wizard(String name, Flyable ride, Protector protector){
